@@ -1,12 +1,12 @@
 
 
 # Item Catalog project
-**by ٌReda Zerrougui**
+**by ٌMohamed Bahaa**
 
 
  ## Project  Description:
 
-This is the 4th project for the Udacity Full Stack Nanodegree , called " Item Catalog"
+This is the 2nd project for the Udacity Full Stack Nanodegree , called " Item Catalog"
 The Item Catalog project consists of developing an application that provides a list of items within a variety of categories, as well as provide a user registration and authentication system. 
 This project uses  data storage to create a RESTful web app that allows users to perform (CRUD)Create, Read, Update, and Delete operations.
 
@@ -23,18 +23,6 @@ Item-Catalog.zip/
 │   └── css/
 │       └──styles.css
 │
-├── screenshot/
-│   └── add.jpg
-│   └── book.jpg
-│   └── bookJSON.jpg
-│   └── catalog.jpg
-│   └── catalogJSON.jpg
-│   └── categories.jpg
-│   └── categoryBooksJSON.jpg
-│   └── delete.jpg
-│   └── edit.jpg
-│   └── login.jpg
-│   └── login2.jpg
 │
 ├── templates/
 │   └── addBook.html
@@ -82,38 +70,38 @@ Item-Catalog.zip/
 4. Then run the application:
 `python app.py`
 
-5. finally Access and test your application by visiting  [http://localhost:5000](http://localhost:5000/).:
-`http://localhost:5000/`
+5. finally Access and test your application by visiting  [http://localhost:8000](http://localhost:8000/).:
+`http://localhost:8000/`
    
     
 
 ## The expected program output is as the following : 
 
-http://localhost:5000/ or http://localhost:5000/catalog 
+http://localhost:8000/ or http://localhost:8000/catalog 
 - Returns catalog page with all categories and recently added books without login
 <img src="screenshot/catalog.jpg" width="800">
  
  
  ```/catalog/<int:catalog_id>```
  ```/catalog/<int:catalog_id>/books```
-http://localhost:5000/catalog/1/books
+http://localhost:8000/catalog/1/books
 - Returns number of  books in  category 
 <img src="screenshot/categories.jpg" width="800">
   
   
 ```/catalog/<int:catalog_id>/books/<int:book_id>```
-http://localhost:5000/catalog/3/books/7
+http://localhost:8000/catalog/3/books/7
 - show a Book information
 <img src="screenshot/book.jpg" width="800">
 
 
-http://localhost:5000/login
+http://localhost:8000/login
 - login with google api
 <img src="screenshot/login.jpg" width="800">
 <img src="screenshot/login2.jpg" width="800">
 
 
-http://localhost:5000/catalog/add
+http://localhost:8000/catalog/add
 - Allows user to add a new book
 <img src="screenshot/add.jpg" width="800">
 
@@ -128,18 +116,18 @@ http://localhost:5000/catalog/add
 <img src="screenshot/delete.jpg" width="800">
 
 ## JSON Endpoints
-http://localhost:5000/catalog/JSON
+http://localhost:8000/catalog/JSON
 - return categories information
 <img src="screenshot/catalogJSON.jpg" width="800">
 
 
 ```/catalog/<int:catalog_id>/JSON```
-http://localhost:5000/catalog/3/JSON
+http://localhost:8000/catalog/3/JSON
 - return category books information
 <img src="screenshot/categoryBooksJSON.jpg" width="800">
 
 ```/catalog/<int:catalog_id>/books/JSON```
-http://localhost:5000/catalog/2/books/2/JSON
+http://localhost:8000/catalog/2/books/2/JSON
 - return a book detail
 <img src="screenshot/bookJSON.jpg" width="800">
 
@@ -147,4 +135,4 @@ http://localhost:5000/catalog/2/books/2/JSON
  ## Licence
 
 The MIT License ([MIT](https://choosealicense.com/licenses/mit/#))
-Copyright (c) [2018] [Reda Zerrougui]
+Copyright (c) [2019] [Mohamed Bahaa]

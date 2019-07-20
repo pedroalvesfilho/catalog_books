@@ -58,5 +58,5 @@ class Book(Base):
             'name': self.name,
         }
 
-engine = create_engine('sqlite:///books_catalog.db')
+engine = create_engine('sqlite:///books_catalog.db', connect_args={'check_same_thread':False})
 Base.metadata.create_all(engine)

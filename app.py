@@ -1,3 +1,4 @@
+
 from flask import Flask, render_template, url_for, request, redirect, \
                   jsonify, make_response, flash
 from sqlalchemy import create_engine
@@ -9,6 +10,7 @@ import string
 import json
 import httplib2
 import requests
+import psycopg2
 
 from oauth2client.client import flow_from_clientsecrets
 from oauth2client.client import FlowExchangeError
@@ -20,7 +22,7 @@ CLIENT_ID = json.loads(open(
                  'client_secrets.json', 'r').read())['web']['client_id']
 
 # Connect to Database
-engine = create_engine('sqlite:///books_catalog.db')
+engine = create_engine('sqlite:///books_catalog.db', connect_args={'check_same_thread':False})
 Base.metadata.bind = engine
 
 # Create database session
@@ -362,4 +364,4 @@ def gdisconnect():
 if __name__ == '__main__':
     app.debug = True
     app.secret_key = 'super_secret_key'
-    app.run(host='localhost', port=5000)
+    app.run(host='0.0.0.0', port=8000)

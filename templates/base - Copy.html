@@ -1,18 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<html itemscope itemtype="http://schema.org/Article">
+
+
 <head>
 
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="description" content="Books catalog website">
 	<meta name="author" content="Bahaa Mohamed">
-	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
-	<script src="https://apis.google.com/js/api:client.js"></script>
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	<meta name="google-signin-client_id" content="1006000930920-sp144j0sd39752squd1gq9utao2q99jr.apps.googleusercontent.com">
 
-	<title>Computer Books catalog</title>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+	</script>
+	<script src="https://apis.google.com/js/client:platform.js?onload=start" async defer>
+	</script>
+
+<!-- Continuing the <head> section -->
+  <script>
+    function start() {
+      gapi.load('auth2', function() {
+        auth2 = gapi.auth2.init({
+          client_id: '1006000930920-sp144j0sd39752squd1gq9utao2q99jr.apps.googleusercontent.com',
+          // Scopes to request in addition to 'profile' and 'email'
+          //scope: 'additional_scope'
+        });
+      });
+    }
+  </script>
+
+<!-- Add where you want your sign-in button to render -->
+<!-- Use an image that follows the branding guidelines in a real app -->
+<button id="signinButton">Sign in with Google</button>
+<script>
+  $('#signinButton').click(function() {
+    // signInCallback defined in step 6.
+    auth2.grantOfflineAccess().then(signInCallback);
+  });
+</script>
+
+  <title>Computer Books catalog</title>
 
 	<!-- Bootstrap core CSS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
