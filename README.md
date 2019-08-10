@@ -2,8 +2,10 @@
 **by ٌMohamed Bahaa**
 
 https://github.com/mohamed-bahaa/catalog
+
 Local:
 $ books-conf-1917381-190723-ok
+
 Remote:
 https://github.com/pedroalvesfilho/catalog_books
 
@@ -28,7 +30,7 @@ CRUD - Create, Read, Update, and Delete operations.
 A user does not need to be logged in in order to read the categories or items uploaded. However, users who 
 created an item are the only users allowed to update or delete the item that they created.
 
-####   the Computer Books Catalog app  represent the Item Catalog 
+### The Computer Books Catalog app  represent the Item Catalog 
 ## Project contents
 
 Within the download you'll find the following files:
@@ -99,14 +101,14 @@ http://localhost:8000/ or http://localhost:8000/catalog
 <img src="screenshot/catalog.jpg" width="800">
  
  
- ```/catalog/<int:catalog_id>```
- ```/catalog/<int:catalog_id>/books```
+`/catalog/<int:catalog_id>`
+`/catalog/<int:catalog_id>/books`
 http://localhost:8000/catalog/1/books
 - Returns number of  books in  category 
 <img src="screenshot/categories.jpg" width="800">
   
   
-```/catalog/<int:catalog_id>/books/<int:book_id>```
+`/catalog/<int:catalog_id>/books/<int:book_id>`
 http://localhost:8000/catalog/3/books/7
 - show a Book information
 <img src="screenshot/book.jpg" width="800">
@@ -123,12 +125,12 @@ http://localhost:8000/catalog/add
 <img src="screenshot/add.jpg" width="800">
 
 
-``` /catalog/<int:catalog_id>/books/<int:book_id>/edit```
+` /catalog/<int:catalog_id>/books/<int:book_id>/edit`
 - Allows user to edit  his book
 <img src="screenshot/edit.jpg" width="800">
 
 
-```/catalog/<int:catalog_id>/books/<int:book_id>/delete```
+`/catalog/<int:catalog_id>/books/<int:book_id>/delete`
 - Allows user to delete his book
 <img src="screenshot/delete.jpg" width="800">
 
@@ -138,18 +140,18 @@ http://localhost:8000/catalog/JSON
 <img src="screenshot/catalogJSON.jpg" width="800">
 
 
-```/catalog/<int:catalog_id>/JSON```
+`/catalog/<int:catalog_id>/JSON`
 http://localhost:8000/catalog/3/JSON
 - return category books information
 <img src="screenshot/categoryBooksJSON.jpg" width="800">
 
-```/catalog/<int:catalog_id>/books/JSON```
+`/catalog/<int:catalog_id>/books/JSON`
 http://localhost:8000/catalog/2/books/2/JSON
 - return a book detail
 <img src="screenshot/bookJSON.jpg" width="800">
 
 
- ## Licence
+## Licence
 
 The MIT License ([MIT](https://choosealicense.com/licenses/mit/#))
 Copyright (c) [2019] [Mohamed Bahaa]
