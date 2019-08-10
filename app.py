@@ -11,12 +11,14 @@ import json
 import httplib2
 import requests
 import psycopg2
+# import functools	# Pedro
 
 from oauth2client.client import flow_from_clientsecrets
 from oauth2client.client import FlowExchangeError
 
 
 app = Flask(__name__)
+app.secret_key = 'super_secret_key'	# When running `flask run`
 
 CLIENT_ID = json.loads(open(
                  'client_secrets.json', 'r').read())['web']['client_id']
@@ -224,6 +226,18 @@ def deleteBook(catalog_id, book_id):
     else:
         return render_template('deleteBook.html', book=book)
 
+# https://www.mattbutton.com/2019/01/05/google-authentication-with-python-and-flask/
+def no_cache(view):	# Not used
+    @functools.wraps(view)
+    def no_cache_impl(*args, **kwargs):
+        response = flask.make_response(view(*args, **kwargs))
+        response.headers['Cache-Control'] = 'no-store, no-cache, must-revalidate, max-age=0'
+        response.headers['Pragma'] = 'no-cache'
+        response.headers['Expires'] = '-1'
+        return response
+
+    return functools.update_wrapper(no_cache_impl, view)
+
 
 @app.route('/login')
 def login():
@@ -362,6 +376,13 @@ def gdisconnect():
 
 
 if __name__ == '__main__':
+    """
+    When you start your app by running `flask run`
+    the `if __name__ == '__main__':` block gets skipped.
+    If you don't want to skip it, run with `python <script.py>`.
+    So, write your secret above after `app = Flask(__name__)`
+    """
     app.debug = True
-    app.secret_key = 'super_secret_key'
-    app.run(host='0.0.0.0', port=8000)
+    # app.secret_key = 'super_secret_key'
+    # app.run(host='0.0.0.0', port=8000)
+    app.run(host='0.0.0.0', port=5000)
