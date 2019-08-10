@@ -10,12 +10,15 @@ Remote:
 https://github.com/pedroalvesfilho/catalog_books
 
 Switching remote URLs:
+```
 $ git remote set-url origin https://github.com/pedroalvesfilho/catalog_books
 $ git remote -v
+```
 The next time you git fetch, git pull, or git push to the remote repository, 
 you'll be asked for your GitHub username and password.
 
 https://help.github.com/en/articles/changing-a-remotes-url
+
 ---
 
 
@@ -91,8 +94,6 @@ Item-Catalog.zip/
 
 5. finally Access and test your application by visiting  [http://localhost:8000](http://localhost:8000/).:
 `http://localhost:8000/`
-   
-    
 
 ## The expected program output is as the following : 
 
@@ -149,7 +150,6 @@ http://localhost:8000/catalog/3/JSON
 http://localhost:8000/catalog/2/books/2/JSON
 - return a book detail
 <img src="screenshot/bookJSON.jpg" width="800">
-
 
 ## Licence
 
