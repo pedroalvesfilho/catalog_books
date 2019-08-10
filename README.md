@@ -1,16 +1,32 @@
-
-
 # Item Catalog project
 **by ٌMohamed Bahaa**
 
+https://github.com/mohamed-bahaa/catalog
+Local:
+$ books-conf-1917381-190723-ok
+Remote:
+https://github.com/pedroalvesfilho/catalog_books
 
- ## Project  Description:
+Switching remote URLs:
+$ git remote set-url origin https://github.com/pedroalvesfilho/catalog_books
+$ git remote -v
+The next time you git fetch, git pull, or git push to the remote repository, 
+you'll be asked for your GitHub username and password.
+
+https://help.github.com/en/articles/changing-a-remotes-url
+---
+
+
+## Project  Description:
 
 This is the 2nd project for the Udacity Full Stack Nanodegree , called " Item Catalog"
-The Item Catalog project consists of developing an application that provides a list of items within a variety of categories, as well as provide a user registration and authentication system. 
-This project uses  data storage to create a RESTful web app that allows users to perform (CRUD)Create, Read, Update, and Delete operations.
+The Item Catalog project consists of developing an application that provides a list of items within 
+a variety of categories, as well as provide a user registration and authentication system. 
+This project uses  data storage to create a RESTful web app that allows users to perform 
+CRUD - Create, Read, Update, and Delete operations.
 
-A user does not need to be logged in in order to read the categories or items uploaded. However, users who created an item are the only users allowed to update or delete the item that they created.
+A user does not need to be logged in in order to read the categories or items uploaded. However, users who 
+created an item are the only users allowed to update or delete the item that they created.
 
 ####   the Computer Books Catalog app  represent the Item Catalog 
 ## Project contents
@@ -55,7 +71,8 @@ Item-Catalog.zip/
     
 2.  Clone or download the Vagrant VM configuration file from  [fullstack-nanodegree-vm repository](https://github.com/udacity/fullstack-nanodegree-vm)
     
-3.  Clone Or download this repository to your desktop , Unzip and  Paste all the files  from this project  `Item-Catalog` into the ```fullstack-nanodegree-vm-master\vagrant\catalog ``` sub-directory
+3.  Clone Or download this repository to your desktop , Unzip and  Paste all the files  from this project  
+`Item-Catalog` into the ```fullstack-nanodegree-vm-master\vagrant\catalog ``` sub-directory
     
 
 
@@ -136,3 +153,13 @@ http://localhost:8000/catalog/2/books/2/JSON
 
 The MIT License ([MIT](https://choosealicense.com/licenses/mit/#))
 Copyright (c) [2019] [Mohamed Bahaa]
+
+When you start your app by running `flask run`
+the `if __name__ == '__main__':` block gets skipped.
+If you don't want to skip it, run with `python <script.py>`.
+When running `flask run`:
+Write your secret  after `app = Flask(__name__)`
+```
+     app = Flask(__name__)
+     app.secret_key = 'super_secret_key'
+```
